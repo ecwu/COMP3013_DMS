@@ -1,7 +1,7 @@
 -- Create a table as following
 
 CREATE TABLE stu_info(
-stu_id SMALLINT AUTO_INCREMENT,
+stu_id SMALLINT AUTO_INCREMENT PRIMARY KEY,
 stu_name VARCHAR(40) NOT NULL,
 birthplace VARCHAR(40) NOT NULL,
 totalscore TINYINT NOT NULL DEFAULT 0,
