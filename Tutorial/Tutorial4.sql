@@ -30,7 +30,7 @@ INSERT INTO stu_info VALUES
 
   CREATE TABLE birth_place(
   birthplace_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-  birthplace VARCHAR(40) NOT NULL,
+  birthplace VARCHAR(40) NOT NULL
   );
 
   INSERT birth_place(birthplace)
@@ -45,7 +45,7 @@ INSERT INTO stu_info VALUES
 
   CREATE TABLE major(
   major_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-  major VARCHAR(40) NOT NULL,
+  major VARCHAR(40) NOT NULL
   );
 
   INSERT major(major)
