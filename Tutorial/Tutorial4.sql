@@ -57,16 +57,16 @@ INSERT INTO stu_info VALUES
   SET stu_info.major = major.major_id;
 
 -- Practice inner join/outer join
-  SELECT stu_id, stu_name, birthplace, totalscore, major.major, sex
-  FROM stu_info JOIN major
-  WHERE stu_info.major = major.major_id;
+SELECT stu_id, stu_name, birthplace, totalscore, major.major, sex
+FROM stu_info JOIN major
+WHERE stu_info.major = major.major_id;
   
-  SELECT stu_id, stu_name, birth_place.birthplace, totalscore, major, sex
-  FROM stu_info JOIN birth_place
-  WHERE stu_info.birthplace = birth_place.birthplace_id;
+SELECT stu_id, stu_name, birth_place.birthplace, totalscore, major, sex
+FROM stu_info JOIN birth_place
+WHERE stu_info.birthplace = birth_place.birthplace_id;
 
 -- Practice how to join with multiple tables
 
-  SELECT stu_id, stu_name, birth_place.birthplace, totalscore, major.major, sex
-  FROM stu_info JOIN birth_place JOIN major
-  WHERE stu_info.birthplace = birth_place.birthplace_id AND stu_info.birthplace = birth_place.birthplace_id;
+SELECT stu_id, stu_name, birth_place.birthplace, totalscore, major.major, sex
+FROM stu_info JOIN birth_place JOIN major
+WHERE stu_info.birthplace = birth_place.birthplace_id AND stu_info.birthplace = birth_place.birthplace_id;
