@@ -29,22 +29,32 @@ INSERT INTO stu_info VALUES
   -- Create a new table birth_place as a reference index of birthplace 
 
   CREATE TABLE birth_place(
+  birthplace_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   birthplace VARCHAR(40) NOT NULL,
   );
 
   INSERT birth_place(birthplace)
   SELECT DISTINCT birthplace
   FROM stu_info;
+  
+  UPDATE stu_info INNER JOIN birth_place 
+  ON birth_place.birthplace = stu_info.birthplace 
+  SET stu_info.birthplace = birth_place.birthplace_id;
 
   -- Create a new table major as a reference index of major
 
   CREATE TABLE major(
+  major_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   major VARCHAR(40) NOT NULL,
   );
 
   INSERT major(major)
   SELECT DISTINCT major
   FROM stu_info;
+  
+  UPDATE stu_info INNER JOIN major
+  ON major.major = stu_info.major
+  SET stu_info.major = major.major_id;
 
 -- Practice inner join/outer join
 
